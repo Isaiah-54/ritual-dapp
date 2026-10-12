@@ -1,0 +1,20 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+# Leave solc unpinned so mobile/Termux and desktop Foundry both work.
+optimizer = true
+optimizer_runs = 200
+via_ir = true
+# via_ir required for Ritual: large precompile ABIs can hit "Stack too deep".
+
+[profile.default.fuzz]
+runs = 256
+
+[rpc_endpoints]
+ritual = "https://rpc.ritualfoundation.org"
+
+[fmt]
+line_length = 100
+tab_width = 4
+bracket_spacing = true
