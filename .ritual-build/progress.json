@@ -1,0 +1,54 @@
+{
+  "intent": "build",
+  "features": ["longrunning-callback", "contracts", "testing"],
+  "current_phase": 3,
+  "phases": [
+    {
+      "id": 0,
+      "name": "bootstrap",
+      "status": "complete",
+      "notes": "Repo scaffolded; Foundry + via_ir"
+    },
+    {
+      "id": 1,
+      "name": "consumer-callback-auth",
+      "status": "complete",
+      "notes": "RitualConsumer.onResult requires AsyncDelivery; idempotent; empty result OK"
+    },
+    {
+      "id": 2,
+      "name": "unit-tests-check5",
+      "status": "complete",
+      "notes": "6 forge tests: auth, empty, late TTL, idempotent"
+    },
+    {
+      "id": 3,
+      "name": "full-agent-build",
+      "status": "pending",
+      "notes": "Price Pulse: wallet lock, Phase-1 submit, deploy, optional frontend"
+    }
+  ],
+  "files_read": [
+    "skills/ritual-dapp-contracts/SKILL.md",
+    "examples/sovereign-agent/SovereignAgentConsumer.sol"
+  ],
+  "next_file": "skills/ritual-dapp-overview/SKILL.md",
+  "artifacts": [
+    "foundry.toml",
+    "src/RitualConsumer.sol",
+    "test/RitualConsumer.t.sol",
+    "docs/ritual-static-checks.md",
+    "AGENT.md"
+  ],
+  "markers": {
+    "chain_connection": false,
+    "wallet_funded": false,
+    "contract_compiled": true,
+    "contract_deployed": false,
+    "precompile_simulated": false,
+    "precompile_settled": false,
+    "frontend_renders": false,
+    "frontend_connects": false,
+    "e2e_complete": false
+  }
+}
