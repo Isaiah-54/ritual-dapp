@@ -1,0 +1,16 @@
+.ritual-build/artifacts/
+.ritual-build/cache/
+cache/
+out/
+broadcast/
+node_modules/
+.next/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.log
